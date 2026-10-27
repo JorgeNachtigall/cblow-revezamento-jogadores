@@ -1,0 +1,29 @@
+{
+  "_leia": "Ajustes manuais que a API do cblow.xyz não informa. Datas em ISO (UTC).",
+
+  "playoffs": {
+    "_leia": "O rodízio zera antes da primeira partida de playoffs. Detecta pelo nome da fase (regex) ou pelo id da partida.",
+    "fasePattern": "playoff|quartas|semi|final",
+    "primeiraPartidaId": null
+  },
+
+  "entradas": {
+    "_leia": "Jogadores que entraram no elenco depois do início. Antes desta data eles não travam o fechamento da volta. Datas estimadas pela ordem de cadastro na API; corrija se souber a data real.",
+    "peuvinii": "2026-10-15T00:00:00Z",
+    "tifa": "2026-10-14T12:00:00Z",
+    "famigerada": "2026-10-15T00:00:00Z",
+    "velhinhodotft": "2026-10-18T00:00:00Z",
+    "ynercias": "2026-10-20T00:00:00Z",
+    "diana-bate-bife": "2026-10-21T00:00:00Z"
+  },
+
+  "ignorar": {
+    "_leia": "Slugs de jogadores que não entram no rodízio por algum motivo não marcado na API.",
+    "slugs": []
+  },
+
+  "naoContar": {
+    "_leia": "Regra 3.2: se uma carta removeu um jogador que acabou de entrar, ele volta pra fila. Liste aqui { partidaId, jogo, slug } quando o jogador aparece na lineup mas não deve contar.",
+    "itens": []
+  }
+}
