@@ -4,38 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Quem precisa ser escalado em cada time do CBLOW, seguindo a regra de rodízio." />
-    <meta name="theme-color" content="#0c0b0a" />
+    <meta name="theme-color" content="#0d0d0c" />
     <title>CBLOW · Rodízio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="app.js"></script>
   </head>
   <body>
-    <header class="top">
-      <a class="brand" href="#/">CBLOW <span>rodízio</span></a>
-      <button class="rules-btn" type="button" aria-expanded="false" aria-controls="rules">Como funciona</button>
+    <header class="nav">
+      <div class="nav-in">
+        <a class="brand" href="#/">CBLOW <span>Rodízio</span></a>
+        <nav>
+          <a href="#/" data-nav="times">Times</a>
+          <a href="#/regras" data-nav="regras">Regras</a>
+          <a href="https://cblow.xyz" target="_blank" rel="noopener">cblow.xyz ↗</a>
+        </nav>
+      </div>
     </header>
 
-    <section id="rules" class="rules" hidden>
-      <h2>A regra</h2>
-      <ol>
-        <li>O elenco inteiro precisa jogar pelo menos uma partida antes de uma escalação se repetir <small>(regra 2.3)</small>.</li>
-        <li>Enquanto houver gente na fila, a próxima escalação precisa ter <b>pelo menos um</b> jogador dela. Quando só sobra um, ele <b>joga obrigatoriamente</b>.</li>
-        <li>Quando todo mundo já jogou, a volta fecha e a fila recomeça com o elenco inteiro.</li>
-        <li>O Pé de Chumbo nunca sai e fica fora da conta <small>(regra 2.4)</small>.</li>
-        <li>Quem saiu do campeonato ou foi condenado na CPI não entra na fila. Presidentes que jogam (ex.: Invasão de Yuumi) não contam.</li>
-        <li>Se uma carta tirou um jogador que acabou de entrar, ele não aparece na lineup e continua na fila <small>(regra 3.2)</small>.</li>
-        <li>A fila zera para o início dos Playoffs <small>(regra 2.5)</small>.</li>
-      </ol>
-      <p class="muted">Dados de <a href="https://cblow.xyz" target="_blank" rel="noopener">cblow.xyz</a>. Ajustes manuais (datas de entrada de jogadores, playoffs) ficam no <code>config.json</code> do repositório.</p>
-    </section>
-
     <main id="app" aria-live="polite">
-      <p class="muted">Carregando…</p>
+      <p class="muted pad">Carregando…</p>
     </main>
 
-    <footer class="foot muted" id="foot"></footer>
+    <footer class="foot">
+      <div class="foot-in">
+        <span>Fan-made, não oficial · dados de <a href="https://cblow.xyz" target="_blank" rel="noopener">cblow.xyz</a></span>
+        <span id="updated"></span>
+      </div>
+    </footer>
   </body>
 </html>
