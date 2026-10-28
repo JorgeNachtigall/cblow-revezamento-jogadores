@@ -172,6 +172,8 @@ function renderGame(g, team) {
   const flags = [];
   if (g.repeatedFrom) flags.push(`<span class="flag red">Repetiu a escalação do jogo vs ${esc(g.repeatedFrom.opponent.name)} (${esc(fmtDay(g.repeatedFrom.when))}${g.repeatedFrom.bestOf > 1 ? `, jogo ${g.repeatedFrom.gameNumber}` : ""}) de maneira indevida</span>`);
   else if (g.noNewPlayer) flags.push(`<span class="flag amber">Ninguém da fila entrou</span>`);
+  if (g.shouldHavePlayed.length === 1) flags.push(`<span class="flag red">Deveria ter jogado: ${esc(g.shouldHavePlayed[0])}</span>`);
+  else if (g.shouldHavePlayed.length > 1) flags.push(`<span class="flag red">Deveria ter jogado pelo menos um destes: ${g.shouldHavePlayed.map(esc).join(", ")}</span>`);
   if (g.shortHanded) flags.push(`<span class="flag">Jogou com ${g.lineup.length}</span>`);
   return `<li class="game">
     <div class="ghead">

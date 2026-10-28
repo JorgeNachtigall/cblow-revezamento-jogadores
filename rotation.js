@@ -95,6 +95,8 @@ export function computeTeam(team, matches, config, now = Date.now()) {
         // Regra 2.3 ao pé da letra: mesma escalação de um jogo anterior desta volta
         repeatedFrom: sameAs ? { opponent: sameAs.opponent, when: sameAs.when, gameNumber: sameAs.gameNumber, bestOf: sameAs.bestOf } : null,
         shortHanded: lineup.length < SLOTS,
+        // Quem estava na fila quando a regra foi quebrada
+        shouldHavePlayed: entered.length === 0 ? pendingBefore.map((p) => p.nick) : [],
       });
 
       if (eligible.every((p) => cur.played.has(p.id))) {
