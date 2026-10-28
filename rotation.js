@@ -93,7 +93,7 @@ export function computeTeam(team, matches, config, now = Date.now()) {
         // Tinha gente pendente e ninguém dela entrou
         noNewPlayer: pendingBefore.length > 0 && entered.length === 0,
         // Regra 2.3 ao pé da letra: mesma escalação de um jogo anterior desta volta
-        repeatedFrom: sameAs ? sameAs.matchId : null,
+        repeatedFrom: sameAs ? { opponent: sameAs.opponent, when: sameAs.when, gameNumber: sameAs.gameNumber, bestOf: sameAs.bestOf } : null,
         shortHanded: lineup.length < SLOTS,
       });
 

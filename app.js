@@ -170,7 +170,7 @@ const TAG_TITLE = {
 
 function renderGame(g, team) {
   const flags = [];
-  if (g.repeatedFrom) flags.push(`<span class="flag red">Repetiu a escalação da partida #${g.repeatedFrom}</span>`);
+  if (g.repeatedFrom) flags.push(`<span class="flag red">Repetiu a escalação do jogo vs ${esc(g.repeatedFrom.opponent.name)} (${esc(fmtDay(g.repeatedFrom.when))}${g.repeatedFrom.bestOf > 1 ? `, jogo ${g.repeatedFrom.gameNumber}` : ""}) de maneira indevida</span>`);
   else if (g.noNewPlayer) flags.push(`<span class="flag amber">Ninguém da fila entrou</span>`);
   if (g.shortHanded) flags.push(`<span class="flag">Jogou com ${g.lineup.length}</span>`);
   return `<li class="game">
