@@ -37,6 +37,9 @@ export function computeTeam(team, matches, config, now = Date.now()) {
     return -Infinity;
   };
   const eligibleAt = (t) => players.filter((p) => entryTime(p) <= t && t < exitTime(p));
+  const ausencias = config.ausencias?.itens ?? [];
+  const absentAt = (p, t) =>
+    ausencias.some((a) => a.slug === p.slug && new Date(a.de).getTime() <= t && t < new Date(a.ate).getTime());
 
   const teamMatches = matches
     .filter((m) => m.games?.length && (m.team1.id === team.id || m.team2.id === team.id))
@@ -77,8 +80,14 @@ export function computeTeam(team, matches, config, now = Date.now()) {
       for (const l of lineup) if (l.tag === "novo" || l.tag === "repetido") cur.played.add(l.id);
 
       const entered = lineup.filter((l) => l.tag === "novo");
+      // Quem estava ausente não é cobrado neste jogo, mas segue na fila
+      const absent = pendingBefore.filter((p) => absentAt(p, t));
+      const owed = pendingBefore.filter((p) => !absentAt(p, t));
+      // Só ausentes na fila: para quem está disponível a volta já fechou, então a próxima
+      // começa em paralelo enquanto a atual segue aberta para os ausentes
+      if (owed.length === 0 && absent.length > 0 && !cur.ahead) cur.ahead = { played: new Set(), games: [] };
       const key = lineupKey(lineup);
-      const sameAs = cur.games.find((g) => lineupKey(g.lineup) === key);
+      const sameAs = [...cur.priorGames, ...cur.games].find((g) => lineupKey(g.lineup) === key);
       cur.games.push({
         matchId: match.id,
         stage: match.stage,
@@ -91,18 +100,31 @@ export function computeTeam(team, matches, config, now = Date.now()) {
         lineup,
         pendingBefore: pendingBefore.map((p) => p.id),
         // Tinha gente pendente e ninguém dela entrou
-        noNewPlayer: pendingBefore.length > 0 && entered.length === 0,
+        noNewPlayer: owed.length > 0 && entered.length === 0,
         // Regra 2.3 ao pé da letra: mesma escalação de um jogo anterior desta volta
-        repeatedFrom: sameAs ? { opponent: sameAs.opponent, when: sameAs.when, gameNumber: sameAs.gameNumber, bestOf: sameAs.bestOf } : null,
+        repeatedFrom: sameAs && owed.length > 0 ? { opponent: sameAs.opponent, when: sameAs.when, gameNumber: sameAs.gameNumber, bestOf: sameAs.bestOf } : null,
         shortHanded: lineup.length < SLOTS,
         // Quem estava na fila quando a regra foi quebrada
-        shouldHavePlayed: entered.length === 0 ? pendingBefore.map((p) => p.nick) : [],
+        shouldHavePlayed: entered.length === 0 ? owed.map((p) => p.nick) : [],
+        // Ausências que livraram o time de uma cobrança neste jogo
+        excused: entered.length === 0 ? absent.map((p) => p.nick) : [],
+        countsAhead: !!cur.ahead,
       });
+      if (cur.ahead) {
+        // Quem saiu da fila da volta atual neste jogo não conta para a volta paralela
+        for (const l of lineup) if (l.tag === "repetido") cur.ahead.played.add(l.id);
+        cur.ahead.games.push(cur.games.at(-1));
+      }
 
       if (eligible.every((p) => cur.played.has(p.id))) {
         cur.closed = true;
         cycles.push(cur);
+        const ahead = cur.ahead;
         cur = newCycle(cycles.length + 1, "fechou");
+        if (ahead) {
+          cur.played = ahead.played;
+          cur.priorGames = ahead.games;
+        }
       }
     }
   }
@@ -145,7 +167,7 @@ function lineupKey(lineup) {
 }
 
 function newCycle(number, start) {
-  return { number, start, played: new Set(), games: [], closed: false };
+  return { number, start, played: new Set(), games: [], priorGames: [], ahead: null, closed: false };
 }
 
 export function nextMatch(team, matches) {

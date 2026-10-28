@@ -174,6 +174,8 @@ function renderGame(g, team) {
   else if (g.noNewPlayer) flags.push(`<span class="flag amber">Ninguém da fila entrou</span>`);
   if (g.shouldHavePlayed.length === 1) flags.push(`<span class="flag red">Deveria ter jogado: ${esc(g.shouldHavePlayed[0])}</span>`);
   else if (g.shouldHavePlayed.length > 1) flags.push(`<span class="flag red">Deveria ter jogado pelo menos um destes: ${g.shouldHavePlayed.map(esc).join(", ")}</span>`);
+  if (g.excused.length) flags.push(`<span class="flag">Perdoado: ${g.excused.map(esc).join(", ")} não podia jogar</span>`);
+  if (g.countsAhead) flags.push(`<span class="flag">Quem já tinha jogado conta para a próxima volta</span>`);
   if (g.shortHanded) flags.push(`<span class="flag">Jogou com ${g.lineup.length}</span>`);
   return `<li class="game">
     <div class="ghead">

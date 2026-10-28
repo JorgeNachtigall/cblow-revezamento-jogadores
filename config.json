@@ -22,6 +22,13 @@
     "slugs": []
   },
 
+  "ausencias": {
+    "_leia": "Jogadores que não podiam jogar num período (de/ate em UTC). Nesses jogos eles não são cobrados: o time pode deixá-los de fora e até repetir a escalação se só eles estavam na fila. Eles continuam na fila da volta atual até jogar; enquanto isso, quem joga já conta para a próxima volta.",
+    "itens": [
+      { "slug": "aninha-gameplay", "de": "2026-10-12T03:00:00Z", "ate": "2026-10-13T03:00:00Z", "motivo": "Não podia jogar no dia 12/10" }
+    ]
+  },
+
   "naoContar": {
     "_leia": "Regra 3.2: se uma carta removeu um jogador que acabou de entrar, ele volta pra fila. Liste aqui { partidaId, jogo, slug } quando o jogador aparece na lineup mas não deve contar.",
     "itens": []

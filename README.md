@@ -18,6 +18,7 @@ Site estático (GitHub Pages) que mostra, para cada time do [CBLOW](https://cblo
 - `config.json` guarda o que a API não informa:
   - `entradas`: data em que um jogador entrou no elenco (quem chegou depois não trava a volta anterior). As datas atuais são estimadas — corrija se souber as reais.
   - `playoffs`: regex da fase ou id da primeira partida de playoffs, para zerar a fila.
+  - `ausencias`: período em que um jogador não podia jogar. Nesse período o time não é cobrado por deixá-lo de fora, mas ele continua na fila. Se só ausentes sobraram na fila, a próxima volta começa em paralelo: quem joga a partir dali já conta nela.
   - `ignorar` e `naoContar`: exceções manuais (ex.: regra 3.2).
 
 ## Rodar localmente
