@@ -1,5 +1,7 @@
 # CBLOW · Rodízio
 
+> **Disclaimer:** feito em menos de 5 minutos. Tudo estático, sem backend, sem build, sem framework — porque sim. É pra ser simples e sem incomodação. Projeto de fã, não oficial.
+
 Site estático (GitHub Pages) que mostra, para cada time do [CBLOW](https://cblow.xyz), quem ainda precisa ser escalado segundo a regra de rodízio:
 
 - O elenco inteiro precisa jogar antes de uma escalação se repetir (regra 2.3).
