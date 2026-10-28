@@ -168,6 +168,39 @@ const TAG_TITLE = {
   "nao-conta": "Não conta (regra 3.2, config.json)",
 };
 
+const QUEUE_TITLE = {
+  entrou: "Estava na fila e jogou",
+  ausente: "Estava na fila, mas não podia jogar (config.json)",
+  ficou: "Estava na fila e não jogou",
+};
+
+function renderQueue(g) {
+  if (!g.queue.length) return "";
+  const available = g.queue.filter((q) => q.status !== "ausente");
+  const rule = !available.length
+    ? "Só tinha ausentes na fila, então qualquer escalação valia."
+    : available.length === 1
+      ? `Só ${esc(available[0].nick)} estava disponível na fila: jogava obrigatoriamente.`
+      : "Precisava entrar pelo menos um destes.";
+  // Quem não entrou só é cobrança quando ninguém da fila entrou
+  const missed = g.shouldHavePlayed.length > 0;
+  return `<details class="gqueue">
+    <summary>Fila antes deste jogo · ${g.queue.length}</summary>
+    <p class="muted small">${rule}</p>
+    <ul class="lineup">
+      ${[...g.queue]
+        .sort(byRole)
+        .map(
+          (q) =>
+            `<li class="chip q-${q.status === "ficou" && missed ? "faltou" : q.status}" title="${esc(QUEUE_TITLE[q.status])}">${
+              q.avatarUrl ? `<img src="${esc(q.avatarUrl)}" alt="" loading="lazy" onerror="this.remove()">` : ""
+            }<span>${esc(q.nick)}${q.status === "ausente" ? " · ausente" : ""}</span></li>`
+        )
+        .join("")}
+    </ul>
+  </details>`;
+}
+
 function renderGame(g, team) {
   const flags = [];
   if (g.repeatedFrom) flags.push(`<span class="flag red">Repetiu a escalação do jogo vs ${esc(g.repeatedFrom.opponent.name)} (${esc(fmtDay(g.repeatedFrom.when))}${g.repeatedFrom.bestOf > 1 ? `, jogo ${g.repeatedFrom.gameNumber}` : ""}) de maneira indevida</span>`);
@@ -201,6 +234,7 @@ function renderGame(g, team) {
         .join("")}
     </ul>
     ${flags.length ? `<div class="flags">${flags.join("")}</div>` : ""}
+    ${renderQueue(g)}
   </li>`;
 }
 

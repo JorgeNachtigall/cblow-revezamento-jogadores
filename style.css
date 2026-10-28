@@ -199,6 +199,18 @@ small, .muted { color: var(--dust); }
 .flag.red { color: var(--loss); border-color: rgba(224, 121, 107, .5); background: rgba(224, 121, 107, .08); }
 .flag.amber { color: var(--amber); border-color: rgba(240, 180, 60, .45); background: rgba(240, 180, 60, .07); }
 
+.gqueue { margin-top: 10px; }
+.gqueue summary {
+  cursor: pointer; width: fit-content; color: var(--dust);
+  font-family: var(--display); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .1em;
+}
+.gqueue summary:hover { color: var(--bone); }
+.gqueue[open] summary { color: var(--bone); margin-bottom: 8px; }
+.gqueue p { margin: 0 0 8px; }
+.chip.q-entrou { color: var(--bone); border-color: rgba(127, 199, 154, .55); background: rgba(127, 199, 154, .1); }
+.chip.q-faltou { color: var(--loss); border-color: rgba(224, 121, 107, .5); background: rgba(224, 121, 107, .08); }
+.chip.q-ausente { border-style: dashed; opacity: .65; }
+
 /* Regras */
 .rules { margin: 0 0 14px; padding-left: 20px; }
 .rules li { margin-bottom: 8px; }

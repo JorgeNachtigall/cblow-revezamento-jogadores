@@ -99,6 +99,14 @@ export function computeTeam(team, matches, config, now = Date.now()) {
         card: (match.team1.id === team.id ? game.card1 : game.card2)?.name ?? null,
         lineup,
         pendingBefore: pendingBefore.map((p) => p.id),
+        // Fila no momento do jogo, com o que aconteceu com cada um
+        queue: pendingBefore.map((p) => ({
+          id: p.id,
+          nick: p.nick,
+          avatarUrl: p.avatarUrl,
+          role: p.role,
+          status: entered.some((l) => l.id === p.id) ? "entrou" : absentAt(p, t) ? "ausente" : "ficou",
+        })),
         // Tinha gente pendente e ninguém dela entrou
         noNewPlayer: owed.length > 0 && entered.length === 0,
         // Regra 2.3 ao pé da letra: mesma escalação de um jogo anterior desta volta
