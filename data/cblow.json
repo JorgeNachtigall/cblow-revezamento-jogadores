@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T02:46:13Z",
+  "updatedAt": "2026-10-29T21:43:49Z",
   "rules": "1. Pausas e Tempo Técnico (Pause)\n1.1. Cada equipe dispõe de um limite máximo de 15 minutos de pausa por partida.\n1.2. Caso o tempo de pausa se esgote, a equipe adversária poderá optar por ceder o seu próprio tempo restante ao time adversário.\n1.3. Caso a equipe adversária não ceda o tempo e o limite seja excedido, o jogo será retomado e a equipe faltosa deverá continuar com 1 jogador a menos em invocador.\n2. Rodízio de Elenco e Escalação\n2.1. O presidente da equipe deve obrigatoriamente realizar o rodízio de jogadores a cada partida.\n2.2. É permitida a entrada de um ou mais jogadores de uma só vez entre uma partida e outra.\n2.3. A escalação titular só poderá ser repetida após todos os inscritos do elenco terem jogado ao menos uma partida.\n2.4. Exceção Permanente: O jogador \"Pé de Chumbo\" não pode ser substituído nem sair da escalação sob nenhuma hipótese.\n2.5. A fila de rodízio de jogadores é completamente resetada para o início dos Playoffs.\n3. Ordem do Pré-Jogo e Cartas\n3.1. A definição das partidas deve seguir estritamente a seguinte ordem:\n- Definição da escalação de jogadores pelo presidente do time;\n- Sorteio e revelação da Carta do jogo.\n3.2. Interação com Cartas de Remoção: Se o sorteio da carta resultar na remoção de um jogador (ex.: Carta do Bot ou Yuumi) e essa carta afetar um jogador que acabou de entrar, este jogador não perde seu turno de rodízio e retorna imediatamente para a fila do time.\n3.3. Interação com o Fearless Draft: Cartas que alteram ou interagem diretamente com o draft resetam o Fearless Draft exclusivamente para a partida em questão. Nas partidas seguintes, o Fearless Draft é reestabelecido normalmente, considerando todos os campeões previamente escolhidos até então.",
   "teams": [
     {
@@ -607,6 +607,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 25,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-10-31T22:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 10,
+            "slug": "amigosdomylennzy",
+            "name": "AMIGOS DO MYLENNZY",
+            "tag": "ADM",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 7,
+            "slug": "gayneyryodan",
+            "name": "GAYNEY RYODAN",
+            "tag": "GAY",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     },
@@ -1267,6 +1293,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 25,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-10-31T22:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 10,
+            "slug": "amigosdomylennzy",
+            "name": "AMIGOS DO MYLENNZY",
+            "tag": "ADM",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 7,
+            "slug": "gayneyryodan",
+            "name": "GAYNEY RYODAN",
+            "tag": "GAY",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     },
@@ -1829,6 +1881,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 26,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-10-31T23:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 12,
+            "slug": "lestrolls",
+            "name": "LES TROLLS",
+            "tag": "LEST",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 13,
+            "slug": "lullagaming",
+            "name": "LULLA GAMING",
+            "tag": "LLG",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     },
@@ -2391,6 +2469,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 26,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-10-31T23:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 12,
+            "slug": "lestrolls",
+            "name": "LES TROLLS",
+            "tag": "LEST",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 13,
+            "slug": "lullagaming",
+            "name": "LULLA GAMING",
+            "tag": "LLG",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     },
@@ -2999,6 +3103,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 28,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-11-01T01:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 8,
+            "slug": "vosbronzes",
+            "name": "VOS BRONZES",
+            "tag": "VOS",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 9,
+            "slug": "pitbronzes",
+            "name": "PIT BRONZES",
+            "tag": "PIT",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     },
@@ -3607,6 +3737,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 27,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-11-01T00:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 6,
+            "slug": "sucatainbox",
+            "name": "SUCATA IN BOX",
+            "tag": "SIB",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 11,
+            "slug": "sktenis",
+            "name": "SKTENIS",
+            "tag": "SKTT",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     },
@@ -4169,6 +4325,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 27,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-11-01T00:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 6,
+            "slug": "sucatainbox",
+            "name": "SUCATA IN BOX",
+            "tag": "SIB",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 11,
+            "slug": "sktenis",
+            "name": "SKTENIS",
+            "tag": "SKTT",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     },
@@ -4733,6 +4915,32 @@
           },
           "team1Score": 0,
           "team2Score": 1
+        },
+        {
+          "id": 28,
+          "stage": "Rodada 5",
+          "bestOf": 1,
+          "status": "agendada",
+          "scheduledAt": "2026-11-01T01:00:00.000Z",
+          "streamUrl": null,
+          "team1": {
+            "id": 8,
+            "slug": "vosbronzes",
+            "name": "VOS BRONZES",
+            "tag": "VOS",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team2": {
+            "id": 9,
+            "slug": "pitbronzes",
+            "name": "PIT BRONZES",
+            "tag": "PIT",
+            "logoUrl": null,
+            "color": "#d79c6d"
+          },
+          "team1Score": 0,
+          "team2Score": 0
         }
       ]
     }
@@ -10093,6 +10301,110 @@
           ]
         }
       ]
+    },
+    {
+      "id": 25,
+      "stage": "Rodada 5",
+      "bestOf": 1,
+      "status": "agendada",
+      "scheduledAt": "2026-10-31T22:00:00.000Z",
+      "streamUrl": null,
+      "team1": {
+        "id": 10,
+        "slug": "amigosdomylennzy",
+        "name": "AMIGOS DO MYLENNZY",
+        "tag": "ADM",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team2": {
+        "id": 7,
+        "slug": "gayneyryodan",
+        "name": "GAYNEY RYODAN",
+        "tag": "GAY",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team1Score": 0,
+      "team2Score": 0
+    },
+    {
+      "id": 26,
+      "stage": "Rodada 5",
+      "bestOf": 1,
+      "status": "agendada",
+      "scheduledAt": "2026-10-31T23:00:00.000Z",
+      "streamUrl": null,
+      "team1": {
+        "id": 12,
+        "slug": "lestrolls",
+        "name": "LES TROLLS",
+        "tag": "LEST",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team2": {
+        "id": 13,
+        "slug": "lullagaming",
+        "name": "LULLA GAMING",
+        "tag": "LLG",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team1Score": 0,
+      "team2Score": 0
+    },
+    {
+      "id": 27,
+      "stage": "Rodada 5",
+      "bestOf": 1,
+      "status": "agendada",
+      "scheduledAt": "2026-11-01T00:00:00.000Z",
+      "streamUrl": null,
+      "team1": {
+        "id": 6,
+        "slug": "sucatainbox",
+        "name": "SUCATA IN BOX",
+        "tag": "SIB",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team2": {
+        "id": 11,
+        "slug": "sktenis",
+        "name": "SKTENIS",
+        "tag": "SKTT",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team1Score": 0,
+      "team2Score": 0
+    },
+    {
+      "id": 28,
+      "stage": "Rodada 5",
+      "bestOf": 1,
+      "status": "agendada",
+      "scheduledAt": "2026-11-01T01:00:00.000Z",
+      "streamUrl": null,
+      "team1": {
+        "id": 8,
+        "slug": "vosbronzes",
+        "name": "VOS BRONZES",
+        "tag": "VOS",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team2": {
+        "id": 9,
+        "slug": "pitbronzes",
+        "name": "PIT BRONZES",
+        "tag": "PIT",
+        "logoUrl": null,
+        "color": "#d79c6d"
+      },
+      "team1Score": 0,
+      "team2Score": 0
     }
   ]
 }
