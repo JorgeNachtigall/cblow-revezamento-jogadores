@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T21:43:49Z",
+  "updatedAt": "2026-10-30T01:49:07Z",
   "rules": "1. Pausas e Tempo Técnico (Pause)\n1.1. Cada equipe dispõe de um limite máximo de 15 minutos de pausa por partida.\n1.2. Caso o tempo de pausa se esgote, a equipe adversária poderá optar por ceder o seu próprio tempo restante ao time adversário.\n1.3. Caso a equipe adversária não ceda o tempo e o limite seja excedido, o jogo será retomado e a equipe faltosa deverá continuar com 1 jogador a menos em invocador.\n2. Rodízio de Elenco e Escalação\n2.1. O presidente da equipe deve obrigatoriamente realizar o rodízio de jogadores a cada partida.\n2.2. É permitida a entrada de um ou mais jogadores de uma só vez entre uma partida e outra.\n2.3. A escalação titular só poderá ser repetida após todos os inscritos do elenco terem jogado ao menos uma partida.\n2.4. Exceção Permanente: O jogador \"Pé de Chumbo\" não pode ser substituído nem sair da escalação sob nenhuma hipótese.\n2.5. A fila de rodízio de jogadores é completamente resetada para o início dos Playoffs.\n3. Ordem do Pré-Jogo e Cartas\n3.1. A definição das partidas deve seguir estritamente a seguinte ordem:\n- Definição da escalação de jogadores pelo presidente do time;\n- Sorteio e revelação da Carta do jogo.\n3.2. Interação com Cartas de Remoção: Se o sorteio da carta resultar na remoção de um jogador (ex.: Carta do Bot ou Yuumi) e essa carta afetar um jogador que acabou de entrar, este jogador não perde seu turno de rodízio e retorna imediatamente para a fila do time.\n3.3. Interação com o Fearless Draft: Cartas que alteram ou interagem diretamente com o draft resetam o Fearless Draft exclusivamente para a partida em questão. Nas partidas seguintes, o Fearless Draft é reestabelecido normalmente, considerando todos os campeões previamente escolhidos até então.",
   "teams": [
     {
@@ -2677,8 +2677,8 @@
           "role": "top",
           "reserve": false,
           "videoUrl": "https://youtube.com/shorts/WVMTDUXCIi8?feature=share",
-          "cpi": false,
-          "cpiText": null,
+          "cpi": true,
+          "cpiText": "ACIMA DO CAMPEONATO?",
           "cpiProcess": null,
           "cpiVerdict": null,
           "cpiVerdictText": null,
@@ -2691,9 +2691,9 @@
           "quitStamp": null,
           "quitText": null,
           "quitHome": false,
-          "cpiAt": null,
+          "cpiAt": "2026-10-30T01:31:31.105Z",
           "quitAt": null,
-          "cpiStampSub": null,
+          "cpiStampSub": "",
           "cpiDoubt": false,
           "cpiHome": true,
           "cpiVideos": [],
